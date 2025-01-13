@@ -32,6 +32,7 @@ setuptools.setup(
 
     setup_requires=[
         "wheel",
+        "setuptools",
     ],
 
     python_requires=">=3.9",
