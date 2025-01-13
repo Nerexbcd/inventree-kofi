@@ -1,5 +1,5 @@
 from django.http import JsonResponse
-from django.conf.urls import url
+from django.urls import path
 
 import json
 from datetime import datetime as dt
@@ -142,5 +142,5 @@ class KofiPlugin(UrlsMixin, SettingsMixin, InvenTreePlugin):
     def setup_urls(self):
         """URLs for app."""
         return [
-            url(r"kofi/", self.receive, name="kofiWebhook"),
+            path(r"kofi/", self.receive, name="kofiWebhook"),
         ]
