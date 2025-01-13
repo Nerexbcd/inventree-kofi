@@ -21,7 +21,7 @@ class KofiPlugin(UrlsMixin, SettingsMixin, InvenTreePlugin):
 
     # plugin metadata for identity in InvenTree
     NAME = "KofiPlugin"
-    SLUG = "kofi"
+    SLUG = "kofi_plugin"
     TITLE = ("InvenTree Kofi Integration")
     DESCRIPTION = ("Integrates Your Ko-fi shop with InvenTree")
     VERSION = PLUGIN_VERSION
@@ -142,5 +142,5 @@ class KofiPlugin(UrlsMixin, SettingsMixin, InvenTreePlugin):
     def setup_urls(self):
         """URLs for app."""
         return [
-            path(r"kofi", self.receive, name="kofi webhook"),
+            path(r"^kofi/", self.receive, name="kofi_webhook"),
         ]
