@@ -141,6 +141,10 @@ class KofiPlugin(UrlsMixin, SettingsMixin, InvenTreePlugin):
     # Plugin URLs
     def setup_urls(self):
         """URLs for app."""
+
+        setattr(self.receive, 'auth_exempt', True)
+
         return [
-            path(r"kofi", self.receive, name="kofiWebhook"),
+            path(f"kofi/", self.receive, name="kofiWebhook"),
         ]
+    
