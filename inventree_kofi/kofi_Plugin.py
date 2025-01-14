@@ -94,7 +94,7 @@ class KofiPlugin(UrlsMixin, SettingsMixin, InvenTreePlugin):
             
             # Validate token
             if res_token != self.get_setting("KOFI_TOKEN"):
-                return ("Invalid token", 403)
+                return JsonResponse({"error": "Invalid token"}, status=403)
             
             # Convert string to datetime
             datetime = dt.strptime(timestamp, '%Y-%m-%dT%H:%M:%SZ')
