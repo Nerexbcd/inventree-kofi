@@ -138,13 +138,9 @@ class KofiPlugin(UrlsMixin, SettingsMixin, InvenTreePlugin):
         except Exception as e:
             return JsonResponse({"error": str(e)}, status=500)
         
-    # Plugin URLs
-    def setup_urls(self):
-        """URLs for app."""
+    setattr(receive, 'auth_exempt', True)
 
-        setattr(self.receive, 'auth_exempt', True)
-
-        return [
-            path(f"kofi/", self.receive, name="kofiWebhook"),
+    urls = [
+        path(f"kofi/", receive, name="kofiWebhook"),
         ]
     
