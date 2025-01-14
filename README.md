@@ -16,6 +16,7 @@ pip install -U git+https://github.com/Nerexbcd/inventree-kofi
 <div align="center">
   <img src="images/UI-Setup.png"/>
 </div>
+
 ```
 git+https://github.com/Nerexbcd/inventree-kofi
 ```
