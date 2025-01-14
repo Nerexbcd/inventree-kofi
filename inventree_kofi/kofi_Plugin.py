@@ -142,5 +142,5 @@ class KofiPlugin(UrlsMixin, SettingsMixin, InvenTreePlugin):
     def setup_urls(self):
         """URLs for app."""
         return [
-            path(r"kofi/", self.receive, name="kofiWebhook"),
+            path(r"kofi", self.receive, name="kofiWebhook"),
         ]
