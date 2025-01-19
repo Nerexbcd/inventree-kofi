@@ -1,6 +1,9 @@
 # inventree-kofi
 ### InvenTree Ko-fi Store Integration
 
+> [!WARNING]   
+> This Plugin Currently does not work
+
 ## :question: What is this?
 This is an Integration of InvenTree with Ko-fi that when someone orders something on your Ko-fi, it automaticaly creates a new order on a pre-created company (Ko-fi) and add's Your client address and contact to it.
 
